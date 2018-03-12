@@ -1,3 +1,22 @@
 body{
-  background: #f1f1f1;
+  background: #eef2f3;
+  &.accept-payment{
+    background: #3bbf5a;
+  }
+}
+.vertical-content{
+  height: 800px;
+  width: 100%;
+  display: table;
+  .box-vertical{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    .accept-message{
+      font-weight: 200;
+      color: #fff;
+      font-size: 60px;
+      letter-spacing: 3px;
+    }
+  }
 }
