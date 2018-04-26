@@ -15,7 +15,7 @@ var gulp = require('gulp'),
 //----------------------------------------------------------
 
 var config = {
-    catalog: 'wl',
+    catalog: '',
     out: 'web/dist',
 };
 
@@ -68,8 +68,9 @@ gulp.task('images', function() {
 gulp.task('serve', ['sass','js'], function() {
 
     browserSync.init({
-        port:8080,
-        proxy: "localhost/"+ config.catalog +'/'+ config.out
+        server: {
+            baseDir: "./"
+        }
     });
 
 
