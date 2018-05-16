@@ -11,70 +11,34 @@
 
 
 <div class="container container-white">
-    <div class="headline">
-        <h3>Page Title</h3>
-    </div>
+
+
 
     <div class="row">
-
-        <div class="col-md-6 col-sm-6 col-xs-12 pull-right">
-            <div class="image-gallery">
+        <div class="col-md-12">
+            <div id="search_product" class="quick_search">
+                <label><span>Search:</span><input type="search" class="" placeholder="" aria-controls="clients-table"></label>
+            </div>
+            <div class="item-container">
 
             </div>
         </div>
 
-        <div class="col-md-6 col-sm-6 col-xs-12">
-            <div class="product-description">
-                <span class="price">199 PLN(netto)</span>
-                <span class="tax">23 %</span>
-                <h2>Product Title</h2>
-                <p class="short_desc">
-                    Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w.
-                </p>
-                <p class="long_desc">
-                    Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
-                </p>
-
+        <div class="col-md-12">
+            <div class="colorpicker">
+                <p>Brand Color:</p> <input class="jscolor colorfield" value="ab2567">
             </div>
         </div>
 
-
+        <div class="col-md-12">
+            <form action="/file-upload" class="dropzone">
+                <div class="fallback">
+                    <input name="file" type="file" multiple />
+                </div>
+            </form>
         </div>
+    </div>
 
-    <div class="subscribtion">
-        <table class="table">
-            <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-            </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-            </tr>
-            </tbody>
-        </table>
-    </div>
-    </div>
-</div>
 
 
 <script type="text/javascript">
@@ -85,33 +49,8 @@
         loadJS("js/script.js");
 </script>
 
-<script>
-
-    jQuery(document).ready(function($) {
-
-        $('#myCarousel').carousel({
-            interval: 5000
-        });
-
-        $('#carousel-text').html($('#slide-content-0').html());
-
-        //Handles the carousel thumbnails
-        $('[id^=carousel-selector-]').click( function(){
-            var id_selector = $(this).attr("id");
-            var id = id_selector.substr(id_selector.length -1);
-            var id = parseInt(id);
-            $('#myCarousel').carousel(id);
-        });
 
 
-        // When the carousel slides, auto update the text
-        $('#myCarousel').on('slid', function (e) {
-            var id = $('.item.active').data('slide-number');
-            $('#carousel-text').html($('#slide-content-'+id).html());
-        });
-    });
-
-</script>
 
 </body>
 </html>

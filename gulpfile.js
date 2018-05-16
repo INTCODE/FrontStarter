@@ -41,6 +41,8 @@ gulp.task('js', function() {
     gulp.src([
         'node_modules/jquery/dist/jquery.min.js',
         'node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+        'src/plugins/jscolor/jscolor.js',
+        'src/plugins/dropzone/dropzone.js',
         'src/js/**/*.js'
     ])
         .pipe(uglify())
