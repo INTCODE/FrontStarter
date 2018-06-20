@@ -41,9 +41,7 @@ $(cenaBrutto).on('keyup',function () {
     if( $(this).val().length > 0 ) {
         var brutto = parseFloat($(cenaBrutto).val());
 
-
-        //oblicz wysokość vatu.
-
+        //oblicz wysokość vatu.....
 
         if( $(podatek).val().length > 0 ) {
             var  tax = $(podatek).val();
@@ -58,3 +56,20 @@ $(cenaBrutto).on('keyup',function () {
     }
 });
 
+
+// Zmiana podatku
+//--------------------------------------------------------------
+
+$(podatek).on('keyup',function () {
+
+    var tax = $(podatek).val();
+    var netto = parseFloat($(cenaNetto).val());
+
+    if( $(cenaNetto).val().length > 0 ) {
+        var brutto = netto + (netto * (tax/100));
+        cenaBrutto.val(brutto.toFixed(2));
+    }else{
+        console.log("error");
+    }
+
+});
