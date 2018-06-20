@@ -18,7 +18,7 @@ var cenaNetto = $('#pricing #proce_netto'),
 $(cenaNetto).on('keyup',function () {
 
     if( $(this).val().length > 0 ) {
-        var netto = parseInt($(cenaNetto).val());
+        var netto = parseFloat($(cenaNetto).val());
 
         if( $(podatek).val().length > 0 ) {
            var  tax = $(podatek).val();
@@ -39,7 +39,7 @@ $(cenaNetto).on('keyup',function () {
 $(cenaBrutto).on('keyup',function () {
 
     if( $(this).val().length > 0 ) {
-        var brutto = parseInt($(cenaBrutto).val());
+        var brutto = parseFloat($(cenaBrutto).val());
 
 
         //oblicz wysokość vatu.
